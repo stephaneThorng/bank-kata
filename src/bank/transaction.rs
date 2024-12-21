@@ -7,10 +7,10 @@ pub struct Transaction {
 }
 
 impl Transaction {
-    pub fn new(operation: Operation) -> Transaction {
+    pub fn new(operation: Operation, date: DateTime<Utc>) -> Transaction {
         Self {
-            date: Utc::now(),
             operation,
+            date,
         }
     }
 }
